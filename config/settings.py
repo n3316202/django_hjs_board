@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'pybo.apps.PyboConfig',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -75,8 +76,15 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        #"ENGINE": "django.db.backends.sqlite3",
+        #"NAME": BASE_DIR / "db.sqlite3",
+
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django',  # mysql
+        'USER': 'django',  # root
+        'PASSWORD': '1234',  # 1234
+        #'HOST': '',  # 공백으로 냅두면 default localhost
+        #'PORT': ''  # 공백으로 냅두면 default 3306
     }
 }
 

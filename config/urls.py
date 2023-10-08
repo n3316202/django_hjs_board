@@ -20,6 +20,6 @@ from pybo import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('pybo/', include('pybo.urls')),
+    path('pybo/', include('pybo.urls')), # pybo/로 매핑해야 한다. 이렇게 뒤에 슬래시를 붙여주면 브라우저 주소창에 http://localhost:8000/pybo 라고 입력해도 자동으로 http://localhost:8000/pybo/ 처럼 변환
 ]
 
