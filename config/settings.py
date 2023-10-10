@@ -55,7 +55,8 @@ ROOT_URLCONF = "config.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        #"DIRS": [],
+        "DIRS": [BASE_DIR / 'templates'], #디렉터리의 전체 경로 C:\Users\toto\PycharmProjects\django_hjs_board\templates
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
